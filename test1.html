@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hello</title>
+    </head>
+    <body>
+        <div id="main">
+            <h1>Welcome to LIKELION for INHA</h1>
+            <button id="main-button" onclick="changeBackgroundColor()">change!</button>
+        </div>
+        <style>
+            body {
+                background-color: #EFC59F;
+            }
+            #main {
+                text-align: center;
+                margin-top: 300px;
+                font-family: Georgia, serif;
+                color: white;
+            }
+            #main-button {
+                border: 1px solid white;
+                color: white;
+                background-color: rgba(255, 255, 255, 0.28);
+                width: 60px;
+                height: 30px;
+            }
+        </style>
+        <script>
+            var colors = ['#F2BBC1', '#98AEBE', 'rgb(145, 205, 193)', '#EFC59F'];
+            var index = 0;
+            function changeBackgroundColor() {
+                if(index >= colors.length) {
+                    index = 0;
+                }
+                document.body.style.backgroundColor = colors[index];
+                index++;
+            }
+        </script>
+    </body>
+</html>
